@@ -28,6 +28,21 @@ ChatGPT was used as a development assistant for:
 * Assistance with preparing the documentation.
 
 The website content, personal information, project selection, and final design decisions were selected by me.
+## AI Assistance and Prompts Used
+
+I used ChatGPT as an AI-assisted development tool while building the portfolio. I remained involved in deciding the content, selecting the projects, reviewing the generated code, making changes according to my requirements, organizing the files, testing the website, and deploying it using GitHub Pages.
+
+### Prompts used
+
+1. "I have to build and host my personal portfolio website using HTML, CSS and JavaScript. It must be responsive and hosted on GitHub Pages. Help me plan and implement it according to these assignment requirements."
+
+2. "Create a responsive portfolio structure with a header/navigation, hero section, About Me, Projects, Contact section and footer with a Download Documentation button."
+
+3. "Help me implement the HTML, CSS and JavaScript for this portfolio and make it responsive for both desktop and mobile."
+
+4. "Help me troubleshoot and improve the portfolio implementation and make sure the navigation and project links work correctly."
+
+5. "Help me prepare the documentation required for the portfolio assignment, including the development approach and AI assistance."
 
 ## 4. Method / Approach
 
