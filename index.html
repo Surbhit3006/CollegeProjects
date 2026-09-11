@@ -1,37 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Surbhit Srivastava, B.Tech Computer Science student at UPES.">
+    <title>Surbhit Srivastava | Computer Science Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">SS<span>.</span></a>
 
-<h2>Send Location</h2>
-<button onclick="sendLocation()">Send Location</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                <span></span><span></span><span></span>
+            </button>
 
-<script>
-function sendLocation() {
-    navigator.geolocation.getCurrentPosition(function(position) {
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        fetch("https://webhook.site/7fca4e64-237c-4d8c-9acd-51b5e33da075", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                lat: position.coords.latitude,
-                lon: position.coords.longitude
-            })
-        })
-        .then(response => {
-            alert("Location sent");
-        })
-        .catch(error => {
-            alert("Error sending");
-            console.log(error);
-        });
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content container">
+                <div class="hero-text">
+                    <p class="eyebrow">B.Tech CSE • UPES Dehradun</p>
+                    <h1>Hi, I'm <span>Surbhit Srivastava.</span></h1>
+                    <p class="hero-description">
+                        A Computer Science student focused on programming,
+                        problem solving, and building practical projects.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
 
-    }, function() {
-        alert("Location permission denied");
-    });
-}
-</script>
+                <div class="hero-card">
+                    <div class="avatar">SS</div>
+                    <p>Computer Science<br>Student</p>
+                </div>
+            </div>
+        </section>
 
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">About Me</p>
+                    <h2>Learning by building.</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-avatar">
+                        <div class="large-avatar">SS</div>
+                    </div>
+
+                    <div class="about-content">
+                        <p>
+                            I am a B.Tech Computer Science and Engineering student at
+                            UPES, Dehradun. I enjoy working with programming concepts,
+                            developing my problem-solving skills, and applying what I
+                            learn through practical projects.
+                        </p>
+                        <p>
+                            I am currently building my foundation in computer science
+                            through Java, C, Python, and core programming concepts.
+                        </p>
+
+                        <div class="skills">
+                            <h3>Technical Skills</h3>
+                            <div class="skill-list">
+                                <span>Java</span>
+                                <span>C</span>
+                                <span>Python</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>DSA</span>
+                            </div>
+                        </div>
+
+                        <div class="extra-skills">
+                            <div>
+                                <h3>Other Skills</h3>
+                                <p>Problem Solving • Attention to Detail</p>
+                            </div>
+                            <div>
+                                <h3>Languages</h3>
+                                <p>Hindi • English</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Projects</p>
+                    <h2>Things I've built.</h2>
+                    <p>Three practical projects that reflect my current learning journey.</p>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-number">01</div>
+                        <h3>Python Health Tracker</h3>
+                        <p>
+                            A simple desktop health-tracking application designed
+                            to record daily goals such as water intake, sleep, and steps.
+                        </p>
+                        <div class="tech-list">
+                            <span>Python</span>
+                            <span>Tkinter</span>
+                            <span>CSV</span>
+                        </div>
+                        <a href="#contact" class="project-link">Project details →</a>
+                    </article>
+
+                    <article class="project-card featured">
+                        <div class="project-number">02</div>
+                        <h3>Sorting Algorithm Analysis</h3>
+                        <p>
+                            An experiment comparing sorting algorithms by measuring
+                            their execution time for different input sizes.
+                        </p>
+                        <div class="tech-list">
+                            <span>C</span>
+                            <span>Algorithms</span>
+                            <span>CSV</span>
+                        </div>
+                        <a href="#contact" class="project-link">Project details →</a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-number">03</div>
+                        <h3>Phone Location Flask Project</h3>
+                        <p>
+                            A learning project exploring how a Flask-based application
+                            can work with location information from a mobile device.
+                        </p>
+                        <div class="tech-list">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>HTML</span>
+                        </div>
+                        <a href="#contact" class="project-link">Project details →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <div>
+                        <p class="eyebrow">Contact</p>
+                        <h2>Let's connect.</h2>
+                        <p>
+                            Have a question or want to get in touch? You can reach me
+                            directly by email.
+                        </p>
+                    </div>
+
+                    <a class="email-link" href="mailto:surbhit3001@gmail.com">
+                        surbhit3001@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <p class="footer-name">Surbhit Srivastava</p>
+                <p>© 2026 Surbhit Srivastava. All rights reserved.</p>
+            </div>
+
+            <a href="documentation.md" download class="download-btn">
+                ↓ Download Documentation
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
