@@ -74,11 +74,11 @@ A learning project exploring a Flask-based application that works with location 
 
 ## 7. Live Website
 
-**Live link:** TO BE ADDED AFTER GITHUB PAGES DEPLOYMENT
+**Live link:** https://surbhit3006.github.io/CollegeProjects/
 
 ## 8. GitHub Repository
 
-**GitHub repository link:** TO BE ADDED AFTER THE REPOSITORY IS CONFIRMED
+**GitHub repository link:** https://github.com/Surbhit3006/CollegeProjects
 
 ## 9. AI-Assisted Development
 
