@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Send Location</h2>
+<button onclick="sendLocation()">Send Location</button>
+
+<script>
+function sendLocation() {
+    navigator.geolocation.getCurrentPosition(function(position) {
+
+        fetch("https://webhook.site/7fca4e64-237c-4d8c-9acd-51b5e33da075", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                lat: position.coords.latitude,
+                lon: position.coords.longitude
+            })
+        })
+        .then(response => {
+            alert("Location sent");
+        })
+        .catch(error => {
+            alert("Error sending");
+            console.log(error);
+        });
+
+    }, function() {
+        alert("Location permission denied");
+    });
+}
+</script>
+
+</body>
+</html>
